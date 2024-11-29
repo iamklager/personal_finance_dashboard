@@ -8,6 +8,28 @@ An all-in-one R-Shiny dashboard to track and analyze the user's financial situat
 Carefully managing one's finances includes proper tracking, analysis, planning. As these things can be tedious or even overwhelming, the Personal Finance Dashboard provides an interface allowing its users to track their income, expenses, and asset purchases or sales. Furthermore, various charts provide a detailed analysis of the user's financial situation, and therefore, support the user in making adjustments to their financial habits.
 
 
+## How to Run
+After downloading the project folder, simply run the *main.R* script. Doing this will automatically install all the necessary packages before starting the application.\\
+
+Alternatively, you can install all the necessary dependencies manually by running the following code:
+```r
+# Functional
+install.packages("DBI")
+install.packages("quantmod")
+install.packages("readxl")
+install.packages("RSQLite")
+# Visualization
+install.packages("highcharter")
+# Shiny
+install.packages("shiny")
+install.packages("DT")
+install.packages("bslib")
+install.packages("colourpicker")
+```
+
+You can also use the data found in the *demo\_data* folder to see how uploading dataset works, as well as how the dashboard behaves live.
+
+
 ## Technologies Used
 
 - R: + Shiny, bslib, highcharter, and quantmod

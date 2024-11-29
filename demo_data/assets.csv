@@ -1,0 +1,7 @@
+"Date","DisplayName","Quantity","PriceTotal","TickerSymbol","Type","Group","TransactionType","TransactionCurrency","SourceCurrency"
+"2024-01-01","Gold",0.128602986274512,263.7,"GC=F","Alternative","Metal","Buy","EUR","USD"
+"2024-01-02","Alphabet",1,140,"GOOG","Stock","Stocks","Buy","EUR","USD"
+"2024-01-03","Silver",20,420.4,"SI=F","Alternative","Metal","Buy","EUR","USD"
+"2024-01-03","Amazon",1,150,"AMZN","Stock","Stocks","Buy","EUR","USD"
+"2024-02-01","Microsoft",1,415,"MSFT","Stock","Stocks","Buy","EUR","USD"
+"2024-02-25","Silver",10,215,"SI=F","Alternative","Metal","Buy","EUR","USD"

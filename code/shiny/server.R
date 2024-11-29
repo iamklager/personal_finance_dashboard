@@ -432,7 +432,6 @@ server <- function(input, output, session) {
   output$out_hcExpensesSource   <- renderHighchart({ hcIncExpBySource(rv_Expenses(), input$in_MainCurrency, input$in_DarkModeOn)})
   
   ## Assets
-  output$out_hcPlaceHolder <- renderHighchart({})
   output$out_hcAssetAllocAcq <- renderHighchart({ hcAssetAllocAcq(rv_InvCurv(), rv_CurrentAssets(), format(as.Date(input$in_DateTo), "%Y-%m-%d"), input$in_MainCurrency, input$in_DarkModeOn) })
   output$out_hcAssetAllocCur <- renderHighchart({ hcAssetAllocCur(rv_InvCurv(), rv_CurrentAssets(), format(as.Date(input$in_DateTo), "%Y-%m-%d"), input$in_MainCurrency, input$in_DarkModeOn) })
   output$out_hcAssetGainsStock <- renderHighchart({ hcAssetGains(rv_InvCurv(), rv_CurrentAssets(), "Stock", format(as.Date(input$in_DateFrom), "%Y-%m-%d"), format(as.Date(input$in_DateTo), "%Y-%m-%d"), input$in_DarkModeOn) })

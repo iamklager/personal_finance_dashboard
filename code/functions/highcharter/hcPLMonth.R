@@ -22,7 +22,7 @@ hcPLMonth <- function(income, expenses, invested_curves, from, to, main_currency
   
   # Income
   if (nrow(income) != 0) {
-    income$Month          <- substr(income$Date,          1, 7)
+    income$Month <- substr(income$Date, 1, 7)
     income <- aggregate.data.frame(income$Amount, list(income$Month), sum)
     colnames(income) <- c("Month", "Amount")
   } else {
@@ -34,7 +34,7 @@ hcPLMonth <- function(income, expenses, invested_curves, from, to, main_currency
   
   # Expenses
   if (nrow(expenses) != 0) {
-    expenses$Month        <- substr(expenses$Date,        1, 7)
+    expenses$Month <- substr(expenses$Date, 1, 7)
     expenses <- aggregate.data.frame(-expenses$Amount, list(expenses$Month), sum)
     colnames(expenses) <- c("Month", "Amount")
   } else {
@@ -77,6 +77,7 @@ hcPLMonth <- function(income, expenses, invested_curves, from, to, main_currency
   df <- merge(df, invested_curves, by = "Month", all = TRUE, incomparables = 0)
   colnames(df) <- c("Month", "Income", "Expenses", "Assets")
   df <- df[order(df$Month), ]
+  df[is.na(df)] <- 0
   df$Amount <- df$Income + df$Expenses + df$Assets
   df$Profit <- ifelse(df$Amount >= 0, df$Amount, 0)
   df$Loss   <- ifelse(df$Amount <  0, df$Amount, 0)
